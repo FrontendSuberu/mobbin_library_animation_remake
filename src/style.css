@@ -16,16 +16,25 @@ body {
   align-items: center;
   height: 100svh;
   font-size: 10vw;
+  z-index: 2;
+  position: relative;
   font-weight: 500;
   letter-spacing: -0.04em;
 }
 
 .library {
-  height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200svh;
+  position: sticky;
+  top: 0;
   text-align: center;
+}
+
+.library-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .library-wrapper p {
@@ -35,6 +44,9 @@ body {
   font-weight: 500;
 }
 
+.content{
+  will-change: transform;
+}
 
 .library-contents{
   display: flex;
