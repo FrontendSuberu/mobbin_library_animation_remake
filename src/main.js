@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".library")
   const total = libText.length;
 
-
-
   gsap.set(libText, {
     yPercent: 400,
     opacity: 0,
@@ -21,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     end: "bottom bottom",
     // end: () => "+=" + libText.length * 150,
     // toggleActions: "play none play reverse",
-    markers: true,
+    // markers: true,
     onUpdate: (self) => {
       if (self.isActive) {
         const p = self.progress; // 0 → 1 for entire scroll range
@@ -37,6 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
       }
+    },
+
+      // ✅ Force it to stay at the final frame when scrolled to end
+    onLeave: () => {
+      gsap.set(libText, { yPercent: 0, opacity: 1 });
     },
   });
 });
