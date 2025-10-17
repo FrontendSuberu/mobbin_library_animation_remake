@@ -1,0 +1,11 @@
+/* Adding my own font. Reason because when i refresh since i am using
+an external service provider for font it shows FOUT which gives a not so nice experience
+ */
+
+
+@font-face{
+    font-family: "Inter Display";
+    font-display: swap;
+    src: url("./InterDisplay-Medium.ttf") format("ttf");
+}
+

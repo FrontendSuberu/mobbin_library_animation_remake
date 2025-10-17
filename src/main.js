@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".library")
   const total = libText.length;
 
+
   gsap.set(libText, {
     yPercent: 400,
     opacity: 0,
